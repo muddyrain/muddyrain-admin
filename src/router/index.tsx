@@ -1,8 +1,7 @@
 import { RoutesProps } from '@/constant/types'
 import { HomePage } from '@/pages/home'
 import { LoginPage } from '@/pages/login'
-import { Page2Page } from '@/pages/page2'
-import { Detail } from '@/pages/page2/detail'
+import { UserPage } from '@/pages/settings'
 export const routes: RoutesProps[] = [
   {
     path: '/login',
@@ -17,14 +16,13 @@ export const routes: RoutesProps[] = [
     element: <HomePage />,
   },
   {
-    path: '/a',
-    name: 'page2',
+    path: '/settings',
+    name: '系统设置',
     children: [
       {
-        path: '/b',
-        name: 'page2-2',
-        parentPath: '',
-        element: <Page2Page />,
+        path: '/user',
+        name: '用户管理',
+        element: <UserPage />,
       },
     ],
   },
