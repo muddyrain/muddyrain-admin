@@ -1,5 +1,3 @@
-import reactSvg from './react.svg'
-import avatar from './avatar.png'
-
-export const Logo = reactSvg
-export const Avatar = avatar
+export { default as Logo } from './react.svg'
+export { default as Avatar } from './avatar.png'
+export { default as ImageError } from './image-error.png'
