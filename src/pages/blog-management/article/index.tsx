@@ -1,15 +1,15 @@
 import { Former, Tabler } from '@/components'
 import { FC, useEffect } from 'react'
 import { columns } from './columns'
-import { getUserList } from '@/api'
+import { getArticleList } from '@/api'
 import { useSetState } from 'ahooks'
-import type { UserType } from '@/types'
+import type { ArticleType } from '@/types'
 import { Button, Space } from 'antd'
 import { RestOutlined, SearchOutlined } from '@ant-design/icons'
 
-export const User: FC = () => {
+export const Article: FC = () => {
   const [state, dispatch] = useSetState({
-    data: [] as UserType[],
+    data: [] as ArticleType[],
     loading: false,
     page: 1,
     pageSize: 10,
@@ -22,7 +22,7 @@ export const User: FC = () => {
     dispatch({
       loading: true,
     })
-    const res = await getUserList({
+    const res = await getArticleList({
       page,
       pageSize,
     })
